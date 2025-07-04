@@ -1,0 +1,432 @@
+/* --- CÀI ĐẶT CHUNG --- */
+body {
+    background-image: url('../images/download.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #fff;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden; 
+}
+
+/* --- HEADER --- */
+header {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    padding:1px 0;
+    position: sticky;
+    top: 0 ;
+    z-index: 2000;
+}
+.header-inner{
+    padding: 20px 20px;
+}
+
+.logo {
+    float: left;
+    width: 110px;
+}
+.logo img {
+    width: 100%;
+    display: block;
+}
+.main-nav {
+    float: left;
+    margin-left: 40px; 
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.menu a {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.menu a:hover,
+.menu a.active {
+    background-color: rgb(131, 32, 7);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 50px;
+    margin: 0 10px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: max-content;
+    z-index: 1000;
+    list-style-type: none;
+    padding: 5px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    font-size: 16px;
+    padding: 10px 16px;
+    display: block;
+}
+.header-right {
+    float: right;
+}
+.search-box {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+}
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    width: 0;
+    transition: width 0.4s ease-in-out;
+    vertical-align: middle;
+    line-height: 30px;
+}
+.search-btn {
+    color: #e84118;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px; 
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.search-box:hover > .search-txt {
+    width: 150px;
+    padding: 0 10px;
+}
+.auth-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px; 
+    color: #ccc;
+    font-weight: bold;
+    font-size: 16px;
+}
+.auth-link i {
+    margin-right: 8px;
+}
+.auth-link:hover {
+    background-color: rgb(131, 32, 7);
+    color: #fff;
+}
+
+/* --- MAIN CONTENT --- */
+main {
+    padding-top: 10px; 
+}
+.section-title {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 2px;
+}
+.filter-bar {
+    text-align: center;
+    padding: 30px 0;
+}
+.filter-bar .dropdown > a {
+    background-color: #2f3640;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition:all 0.2s ease-in-out;
+    border-radius: 16px;
+}
+.filter-bar a:hover {
+    background-color: rgb(131, 32, 7);
+    color: white;
+}
+
+/* Card Grid & Game Cards */
+.card-grid {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+.game-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 15px;
+    background-color: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid #444;
+    border-radius: 16px;
+    text-align: left;
+    font-size: 16px; 
+    position: relative; 
+    height: 380px;
+    white-space:normal;
+}
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+.card-image-container {
+    height: 150px;
+    overflow: hidden;
+}
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-body {
+    padding: 15px;
+}
+.card-footer {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.card-button {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #fff; 
+    transition: all 0.3s ease;
+}
+.card-button:hover {
+    background-color:  rgb(131, 32, 7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+.card-tags .tag {
+    border: 1px solid white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    background-color: transparent;
+    color: white;
+    margin-right: 4px;
+    display: inline-block;
+}
+.tag {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin-right: 6px;
+    background: #666;
+    display: inline-block;
+    margin: 30px 0;
+}
+.game-title {
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 48px; 
+}
+.game-title-bar{
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid #444;
+    padding: 5px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: center;
+}
+.account-buttons .btn-login,
+.account-buttons .btn-register {
+    display: block;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition:  all 0.3s ease;
+}
+.account-buttons .btn-login {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #fff; 
+    transition: all 0.3s ease;
+}
+.account-buttons .btn-register {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #fff; 
+    transition: all 0.3s ease;
+}
+
+
+.account-buttons .btn-login:hover {
+    background-color:  rgb(131, 32, 7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+.account-buttons .btn-register:hover {
+    background-color:  rgb(131, 32, 7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+/* --- FOOTER --- */
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px 40px;
+    border-top: 1px solid #444;
+    margin-top: auto; 
+}
+.site-footer a {
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 1px solid #444;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.site-footer a:hover {
+    color: orange;
+    background-color: rgb(131, 32, 7);
+    color: white;
+    background-color: rgb(131, 32, 7);
+    border-color: rgb(131, 32, 7);
+}
+
+.game-info-section {
+    overflow: hidden; 
+    background-color: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.info-tables-container {
+    float: left;
+    width: 70%;
+}
+.info-table {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.info-table + .info-table {
+    border-left: 1px solid#555;
+}
+.info-table li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    overflow: hidden;
+}
+.info-table li span:first-child { float: left; }
+.info-table li span:last-child { 
+    float: right;
+    font-weight: bold;
+    color: white; 
+}
+.account-actions {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+    border-left: 1px solid #444;
+}
+.detail-page-layout {
+    overflow: hidden; 
+}
+.main-content-column {
+    float: left;
+    width: 70%;
+}
+.sidebar-column {
+    float: right;
+    width: 28%;
+}
+
+.game-list {
+   text-align: center;
+}
+.game-list .game-card {
+    font-size: 16px;
+}
+.pagination-bar {
+    text-align: center;
+    margin: 30px 0;
+}
+.pagination-links a {
+    margin: 0 4px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .header-inner, .main-nav, .header-right {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .main-nav { margin-top: 10px; }
+    .header-right { margin-top: 10px; }
+    .detail-page-layout, .game-info-section, .info-tables-container, .main-content-column, .sidebar-column, .account-actions {
+        float: none;
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+    .account-actions, .sidebar-column { margin-top: 20px; }
+}

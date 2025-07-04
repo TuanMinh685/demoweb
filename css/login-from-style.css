@@ -1,0 +1,57 @@
+
+.auth-center {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center; 
+    min-height: 80vh;
+}
+.login-container {
+    
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left; 
+    background: rgba(65, 60, 60, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid #555;
+    padding: 32px 28px 16px 28px;
+    min-width: 340px;
+}
+.login-container > span {
+    display: block;
+    text-align: center; 
+}
+
+.input-wrapper {
+    margin-bottom: 18px;
+}
+.input-field {
+    width: 100%; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #111;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+.input-submit {
+    width: 100%;
+    border-radius: 8px;
+    background: #ce2626;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signup {
+    margin-top: 18px;
+    text-align: center;
+    color: #ccc;
+}
+.signup a {
+    color: #e84118;
+    font-weight: bold;
+}

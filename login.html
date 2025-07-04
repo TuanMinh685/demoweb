@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="css/script.css">
+    <link rel="stylesheet" href="css/login-from-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="images/z6706380380840_50e3735d2452fce425e3d9670183e80d.jpg" alt="logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="game-detail.html">Thông tin</a></li>
+                    <li class="dropdown">
+                         <a href="game.html">Game</a>
+                        <ul class="dropdown-content">
+                            <li><a href="game.html">Việt Hóa</a></li>
+                            <li><a href="game.html">Hành Động</a></li>
+                            <li><a href="game.html">Nhập vai</a></li>
+                            <li><a href="game.html">Kinh dị</a></li>
+                            <li><a href="game.html">Chiến thuật</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="support.html">Hỗ Trợ</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="" placeholder="Tìm kiếm...">
+                    <a class="search-btn" href="#"><i class="fa fa-search"></i></a>
+                </div>
+                <a href="login.html" class="auth-link">
+                    <i class="fa fa-user"></i>
+                    <span>Đăng nhập/Đăng ký</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container auth-center">
+        <div class="login-container">
+            <span style="font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 18px;">Đăng Nhập</span>
+            <form id="loginForm">
+                <div class="input-wrapper">
+                    <input type="text" id="login-user" class="input-field" placeholder="Nhập email của bạn" required>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="login-pass" class="input-field" placeholder="Nhập mật khẩu" required>
+                </div>
+                <div class="input-wrapper">
+                    <input type="submit" class="input-submit" value="Đăng nhập">
+                </div>
+            </form>
+            <div class="signup">
+                <span>Bạn chưa có tài khoản? <a href="signout.html">Đăng Ký</a></span>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://discord.com" target="_blank">Discord</a>
+    </footer>
+</body>
+</html>
